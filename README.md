@@ -45,28 +45,30 @@ $ make clean; make
 
 ### Usage
 #### Input file
-The input file must include the number of objects, which is followd by a list of similarities among the objects.
-By letting `sim(i,j)` be a similarity between objects i and j, the file should be formatted as follows:
+The input file must include the number of objects, which is followd by a list of similarities among the objects formatted as follows:
 
 ``` sample_sim.txt
-4	// # of objects
--0.11	// sim(1,1)
--0.12	// sim(1,2)
--0.13	// sim(1,3)
--0.14	// sim(1,4)
--0.21	// sim(2,1)
--0.22	// sim(2,2)
--0.23	// sim(2,3)
--0.24	// sim(2,4)
--0.31	// sim(3,1)
--0.32	// sim(3,2)
--0.33	// sim(3,3)
--0.34	// sim(3,4)
--0.41	// sim(4,1)
--0.42	// sim(4,2)
--0.43	// sim(4,3)
--0.44	// sim(4,4)
+4
+-0.11
+-0.12
+-0.13
+-0.14
+-0.21
+-0.22
+-0.23
+-0.24
+-0.31
+-0.32
+-0.33
+-0.34
+-0.41
+-0.42
+-0.43
+-0.44
 ```
+By letting `sim(i,j)` be a similarity between objects i and j, `4` represents the number of objects.
+Also, `-0.11`, `-0.12`, `-0.13`, `-0.14`, `-0.21`, `-0.22`, ..., `-0.44` are corresponding to `sim(0,0)`, `sim(0,1)`, `sim(0,2)`, `sim(0,3)`, `sim(2,0)`, `sim(2,1)`, ..., `sim(3,3)`.
+
 
 #### File conversion
 `ScaleAP` reads the given similarities by using the CRS format, and this requires a file conversion process. 
